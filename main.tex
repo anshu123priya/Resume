@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.3, 30 April 2017) written by
+% LianTze Lim (liantze@gmail.com), based on the 
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options. 
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{03223C}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Anshu Priya}
+\tagline{Indian Institute of Technology, Jodhpur -- 342037}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%\photo{2.5cm}{mmayer-wikipedia-cc-by-2_0}
+
+
+\personalinfo{
+  
+  \email{\href{mailto:priya.1@iitj.ac.in}{priya.1@iitj.ac.in}}
+   \phone{(+91) 6350060520}
+  \linkedin{\href{https://www.linkedin.com/in/anshu-priya-72b783191/}{Anshupriya}}
+   \github{\href{https://github.com/anshu123priya}{Anshupriya}} 
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Internship}
+
+\cvevent{Research and Innovation Lab - TCS}{Anatomical landmark detection in 3D CT scan}{May 2020 -- July 2020}{}
+\begin{itemize}
+%\item Implemented a 3D-Unet network for detection of vertebrae
+\item Generated heatmaps for all 26 vertebras from their coordinates and provided isotropic spacing of 2mm to extend its physical dimension
+\item Trained on 3D-Unet network to detect the landmark on CT scan and got 9.75mm mean error on testing CT scan
+\end{itemize}
+
+\cvevent{MANAS LAB | IIT Mandi | Guide: Dr. Aditya Nigam}{Liver Tumor Segmentation \href{https://github.com/anshu123priya/Liver-Tumor-Segmentation}{\github{}}}{May 2019 -- July 2019}{}
+\begin{itemize}
+\item Built a segmentation network inspired from UNet having an Hourglass module for its bottleneck
+\item Achieved state-of-the-art results (Dice 0.98 for Liver and 0.93 for Liver Tumor) on publicly available datasets of MICCAI 2017 LiTS
+\end{itemize}
+
+\cvevent{}{Brain Tumor Segmentation | \href{https://github.com/anshu123priya/Brain-Tumor-Segementation}{\github{}}}{May 2019}{}
+\begin{itemize}
+\item Build a machine learning algorithm in python that classifies whether a patient
+has heart disease or not 
+\item Used 14 measuring features like max heart rate, chest pain type, age, sex etc in the publicly available datasets on driven data
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%% Projects %%%%%%%%%%%%%%%%%
+
+\cvsection[page1sidebar]{Projects}
+
+
+\cvevent{IIT Jodhpur}{Action Recognition in kids | Guide: Dr. Rajendra Nagar \href{https://github.com/anshu123priya/-Action-recognition-in-kids}{\github{}}}{Feb 2020 -- July 2020}{}
+\begin{itemize}
+\item Design an algorithm to recognize the various actions of kids like, cruising, crawling, jumping and running
+\item Used various deep learning approaches for different input data(skeletal data, dynamic images and RGB videos)
+\end{itemize}
+
+
+\cvevent{}{Sports Equipment Management System | Self Project \href{https://github.com/anshu123priya/Sports-Equipment-Management-System}{\github{}}}{Aug 2019 -- Dec 2019}{}
+\begin{itemize}
+\item Developed a software system for proper allocation and management of the hostel’s sports equipment
+\item Used C++14 for frontend and SQL for backend also used MySql DB on Amazon Web Services
+\end{itemize}
+
+\cvevent{}{PathologicAL Myopia Classification | Guide: Dr. Sandeep Kr. \href{https://github.com/anshu123priya/Classification-of-Pathological-Myopia}{\github{}}}{Feb 2019 -- April 2019}{}
+\begin{itemize}
+\item Classified the fundus photos from PM patients into three labelsPathological Myopia, High Myopia and Normal labels 
+\item Achieved 95\% accuaracy by applying data augmentation on publicly available datasets of MICCAI 2019 PALM with base model ResNet
+\end{itemize}
+
+\cvevent{}{Bus Management System | Self Project \href{https://github.com/anshu123priya/Sports-Equipment-Management-System}{\github{}}}{Jul 2018 -- Dec 2018}{}
+\begin{itemize}
+\item Developed a full-featured command line interface application for managing bus ticket booking/canceling  
+\item Used C++14 for frontend and file management system for data handling
+\end{itemize}
+
+
+\end{document}
